@@ -1,10 +1,40 @@
 import './App.css';
+import ReactDOM from "react-dom/client";
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+
 import Header from './components/Header';
+import HomePage from './pages/HomePage';
+import BookingPage from './pages/BookingPage';
+import ConfirmedBooking from './components/ConfirmedBooking';
 
 function App() {
+
+
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <HomePage />,
+    },
+    {
+      path: "/booking",
+      element: <BookingPage />,
+    },
+    {
+      path: "/confirmedBooking",
+      element: <ConfirmedBooking />
+    },
+  ]);
+
+
+
   return (
+
+
     <>
-      <Header/>
+      <Header />
       <nav>
         <ul>
           <li>
@@ -19,6 +49,7 @@ function App() {
         </ul>
       </nav>
       <main>
+        <RouterProvider router={router} />
 
       </main>
       <footer>
