@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import styles from "./../styles/BookingForm.module.css";
+
 const BookingForm = ({ availableTimes = [], dispatch, submitData }) => {
     const [date, setDate] = useState("");
     const [time, setTime] = useState("");
@@ -27,12 +29,12 @@ const BookingForm = ({ availableTimes = [], dispatch, submitData }) => {
         if(!guests){
             setErrorGuests("Enter the number of guests");
             return;
-        } else if(guests > 0){
+        } else if(guests < 2){
             setErrorGuests("At least 2 guests");
             return;
         } else setErrorGuests();
 
-        if(occasion){
+        if(!occasion){
             setErrorOccasion("Choose an option");
             return;
         } else setErrorOccasion();
@@ -41,13 +43,13 @@ const BookingForm = ({ availableTimes = [], dispatch, submitData }) => {
     }
 
     return (
-        <form style={{ display: "grid", maxWidth: "200px", gap: "20px" }}>
+        <form style={{ display: "grid", width: "400px", gap: "20px" }}>
             <h3>Book Now</h3>
             <label htmlFor="res-date">Choose date</label>
-            <input value={date} onChange={(e) => { dispatch(e.target.value); setDate(e.target.value) }} type="date" id="res-date" />
-            {errorDate?<p className="errorMessage">{errorDate}</p> : null}
+            <input className={styles.input} value={date} onChange={(e) => { dispatch(e.target.value); setDate(e.target.value) }} type="date" id="res-date" />
+            {errorDate?<p className={styles.errorMessage}>{errorDate}</p> : null}
             <label htmlFor="res-time">Choose time</label>
-            <select value={time} onChange={(e)=>{setTime(e.target.value)}} id="res-time">
+            <select  className={styles.input} value={time} onChange={(e)=>{setTime(e.target.value)}} id="res-time">
                 <option value="">Choose a time</option>
                 {
                     availableTimes.map((time) => {
@@ -55,21 +57,21 @@ const BookingForm = ({ availableTimes = [], dispatch, submitData }) => {
                     })
                 }
             </select>
-            {errorTime?<p className="errorMessage">{errorTime}</p> : null}
+            {errorTime?<p className={styles.errorMessage}>{errorTime}</p> : null}
 
             <label htmlFor="guests">Number of guests</label>
-            <input value={guests} onChange={(e) => { setGuests(e.target.value) }} type="number" placeholder="1" min="1" max="10" id="guests" />
-            {errorGuests?<p className="errorMessage">{errorGuests}</p> : null}
+            <input  className={styles.input} value={guests} onChange={(e) => { setGuests(e.target.value) }} type="number" placeholder="1" min="1" max="10" id="guests" />
+            {errorGuests?<p className={styles.errorMessage}>{errorGuests}</p> : null}
             
             <label htmlFor="occasion">Occasion</label>
-            <select value={occasion} onChange={(e) => { setoOccasion(e.target.value) }} id="occasion">
+            <select  className={styles.input} value={occasion} onChange={(e) => { setoOccasion(e.target.value) }} id="occasion">
                 <option value={"Birthday"}>Birthday</option>
                 <option value={"Anniversary"}>Anniversary</option>
             </select>
-            {errorOccasion?<p className="errorMessage">{errorOccasion}</p> : null}
+            {errorOccasion?<p className={styles.errorMessage}>{errorOccasion}</p> : null}
 
 
-            <input aria-label="On Click" type="button" onClick={onSubmit} value="Make Your reservation" />
+            <input className={styles.button} aria-label="On Click" type="button" onClick={onSubmit} value="Make Your reservation" />
         </form>
     );
 }

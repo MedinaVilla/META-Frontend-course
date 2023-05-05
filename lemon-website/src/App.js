@@ -1,11 +1,11 @@
 import './App.css';
-import ReactDOM from "react-dom/client";
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
 
-import Header from './components/Header';
+import Header from './components/layout/Header';
+import Footer from './components/layout/Footer';
 import HomePage from './pages/HomePage';
 import BookingPage from './pages/BookingPage';
 import ConfirmedBooking from './components/ConfirmedBooking';
@@ -16,15 +16,15 @@ function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <HomePage />,
+      element: <><Header /><HomePage /><Footer/></>,
     },
     {
       path: "/booking",
-      element: <BookingPage />,
+      element: <><Header /><BookingPage /><Footer/></>,
     },
     {
       path: "/confirmedBooking",
-      element: <ConfirmedBooking />
+      element: <><Header /><ConfirmedBooking /><Footer/></>
     },
   ]);
 
@@ -34,27 +34,9 @@ function App() {
 
 
     <>
-      <Header />
-      <nav>
-        <ul>
-          <li>
-            Item 1
-          </li>
-          <li>
-            Item 2
-          </li>
-          <li>
-            Item 3
-          </li>
-        </ul>
-      </nav>
       <main>
         <RouterProvider router={router} />
-
       </main>
-      <footer>
-        My FOOTER
-      </footer>
     </>
   );
 }

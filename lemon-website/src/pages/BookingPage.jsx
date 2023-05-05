@@ -1,7 +1,9 @@
-import React, { useEffect, useReducer, useState } from 'react';
+import React, { useReducer } from 'react';
 import BookingForm from '../components/BookingForm';
 import { fetchAPI, submitAPI } from '../utils/API';
 import { useNavigate } from "react-router-dom";
+
+import styles from "./../styles/BookingPage.module.css";
 
 const BookingPage = () => {
     const navigate = useNavigate();
@@ -25,10 +27,14 @@ const BookingPage = () => {
     };
 
     return (
-        <div>
-            <p>Booking Page</p>
+        <section>
+            <div className={styles.hero}>
+                <p>Booking a reservation</p>
+            </div>
+            <div className={styles.box}>
             <BookingForm availableTimes={availableTimes} dispatch={dispatch} submitData={submitData} />
-        </div>
+            </div>
+        </section>
     );
 }
 

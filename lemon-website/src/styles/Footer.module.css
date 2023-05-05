@@ -1,0 +1,48 @@
+@media screen and (min-width: 0px) {
+    .container{
+      background-color:#495E57;
+      padding: 48px;
+      margin-top: 48px;
+    }
+
+    .container > div{
+        display:flex;
+        margin: 0 auto;
+        gap: 64px;
+        flex-wrap: wrap;
+        justify-content:center;
+        color:white;
+        margin-top: 24px;
+    }
+
+    .container > div ul {
+        list-style-type: none; 
+        padding-left:0;
+    }
+
+    .container > div ul > li {
+        cursor:pointer;
+        padding-bottom:8px;
+    }
+    .container > div ul > li:hover {
+        text-decoration:underline;
+    }
+    .logo{
+        width: 90px;
+    }
+
+
+}
+@media screen and (min-width: 820px) {
+    .container > div{
+        gap: 240px;
+    }
+}
+
+@media screen and (min-width: 960px) {
+
+}
+
+@media screen and (min-width: 1320px) {
+
+}

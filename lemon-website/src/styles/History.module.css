@@ -1,0 +1,49 @@
+@media screen and (min-width: 0px) {
+    .container{
+        display:flex;
+        padding: 80px;
+        margin: 0 auto;
+        justify-content:center;
+        align-items:center;
+        gap: 38px;
+        flex-wrap: wrap;
+    }
+
+    .container > div:nth-child(1){
+        max-width: 100vw;
+
+
+    }
+    .container > div:nth-child(1) > h1{
+        font-size: 36px;
+        color:#F4CE14;
+    }
+
+    .container > div:nth-child(1) > h2{
+        font-size: 28px;
+        color:#495E57;
+    }
+
+    .image{
+        width: 100%;
+        border-radius: 18px;
+    }
+}
+@media screen and (min-width: 820px) {
+    .container > div:nth-child(1){
+        max-width: 40vw;
+    }
+
+    .image{
+        max-width:500px;
+        border-radius: 18px;
+    }
+}
+
+@media screen and (min-width: 960px) {
+
+}
+
+@media screen and (min-width: 1320px) {
+
+}

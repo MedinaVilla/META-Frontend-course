@@ -1,0 +1,36 @@
+@media screen and (min-width: 0px) {
+    .container{
+      padding: 42px 0 42px 0;
+      background-color:#495E57;
+      margin-top: 64px;
+
+    }
+  
+    .box{
+      display:flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 24px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+
+    .title{
+        font-size: 36px;
+        color:white;
+        text-align:center;
+    }
+    
+  }
+  @media screen and (min-width: 820px) {
+    
+  }
+  
+  @media screen and (min-width: 960px) {
+  
+  }
+  
+  @media screen and (min-width: 1320px) {
+  
+  }

@@ -1,0 +1,50 @@
+@media screen and (min-width: 0px) {
+    .card{
+        display:flex;
+        flex-direction: column;
+        background-color: rgb(255, 255, 255);
+        border-radius: 12px;
+        max-width: 240px;
+        text-align:center;
+        padding: 20px;
+    }
+
+    .preview{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .info{
+        font-size: 16px;
+        color: #495E57;
+        margin-top: -12px;
+    }
+
+    .info > h3{
+
+    }
+
+    .info > span {
+        font-weight: bold;
+        color:#F4CE14;
+    }
+
+    .footer{
+        padding: 0 12px 12px 12px;
+
+    }
+
+}
+  @media screen and (min-width: 820px) {
+    
+  }
+  
+  @media screen and (min-width: 960px) {
+  
+  }
+  
+  @media screen and (min-width: 1320px) {
+  
+  }

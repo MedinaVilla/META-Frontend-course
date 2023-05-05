@@ -1,0 +1,53 @@
+@media screen and (min-width: 0px) {
+  .container{
+    margin-top: 80px;
+  }
+
+  .top{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    margin: 0 auto;
+    max-width: 80vw;
+    flex-wrap: wrap;
+  }
+
+  .mealsBox{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 24px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    margin-top: 40px;
+
+  }
+
+  .button{
+    padding: 18px;
+    background-color: #F4CE14;
+    border-radius: 28px;
+    font-size: 18px;
+    color: #495E57;
+    font-weight: bold;
+    margin-left: 80px;
+    outline: 0;
+    border: 0;
+  }
+
+ .button:hover{
+    cursor:pointer;
+    background-color: #d6ba2a;
+}
+}
+@media screen and (min-width: 820px) {
+  
+}
+
+@media screen and (min-width: 960px) {
+
+}
+
+@media screen and (min-width: 1320px) {
+
+}

@@ -1,0 +1,41 @@
+@media screen and (min-width: 0px) {
+    .input{
+        padding: 8px;
+        width: 100%;
+        border-radius: 6px;
+        border: 2px solid rgb(228, 227, 227);
+    }
+
+    .button{
+        padding: 18px;
+        background-color: #F4CE14;
+        border-radius: 28px;
+        font-size: 18px;
+        color: #495E57;
+        margin-top: 24px;
+        font-weight: bold;
+        outline: 0;
+        border: 0;
+    }
+
+    .button:hover{
+        cursor:pointer;
+        background-color: #d6ba2a;
+    }
+
+    .errorMessage{
+        margin: -14px;
+        color:rgb(205, 20, 20);
+    }
+}
+@media screen and (min-width: 820px) {
+
+}
+
+@media screen and (min-width: 960px) {
+
+}
+
+@media screen and (min-width: 1320px) {
+
+}
